@@ -1,0 +1,8 @@
+<div class="container">
+  <app-todo-controls (onAddTodo)="onAddTodo($event)" ></app-todo-controls>
+  <app-todo-list 
+    (onUpdateTodo)="onUpdateTodo($event)"
+    (onDeleteTodo)="onDeleteTodo($event)"
+    [todos]="list" >
+  </app-todo-list>
+</div>

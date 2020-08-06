@@ -1,0 +1,12 @@
+<div class="root">
+  <div *ngIf="todos.length === 0" >No Todos</div>
+  <div class="container" *ngFor="let todo of todos" > 
+    <div [ngClass]="{ strike: todo.isDone }" >
+      {{ todo.value }}
+    </div>
+    <div class="controls" >
+      <input type="checkbox" (click)="onUpdateTodo.emit(todo.id)" />
+      <div class="delete-btn" (click)="onDeleteTodo.emit(todo.id)" >delete</div>
+    </div>
+  </div>  
+</div>
